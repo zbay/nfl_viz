@@ -1,0 +1,35 @@
+Rk,Tm,G,Att,Yds,TD,Lng,Y/A,Y/G,Fmb
+1,San Francisco 49ers,16,418,2095,14,68,5.0,130.9,29
+2,Jacksonville Jaguars,16,514,2091,20,52,4.1,130.7,18
+3,Oakland Raiders,16,488,2084,18,75,4.3,130.3,22
+4,Kansas City Chiefs,16,521,2082,14,82,4.0,130.1,22
+5,St. Louis Rams,16,431,2059,13,58,4.8,128.7,30
+6,Cincinnati Bengals,16,442,2051,11,50,4.6,128.2,34
+7,Dallas Cowboys,16,493,2051,16,63,4.2,128.2,22
+8,Buffalo Bills,16,519,2040,12,52,3.9,127.5,17
+9,Washington Redskins,16,463,2039,23,76,4.4,127.4,31
+10,Pittsburgh Steelers,16,495,1991,14,52,4.0,124.4,19
+11,New York Jets,16,486,1961,7,50,4.0,122.6,22
+12,Denver Broncos,16,465,1864,13,71,4.0,116.5,33
+13,Tennessee Titans,16,459,1811,19,40,3.9,113.2,17
+14,Minnesota Vikings,16,422,1804,13,70,4.3,112.8,24
+15,Tampa Bay Buccaneers,16,502,1776,7,33,3.5,111.0,25
+16,Baltimore Ravens,16,431,1754,9,72,4.1,109.6,24
+17,Philadelphia Eagles,16,424,1746,5,29,4.1,109.1,33
+18,New Orleans Saints,16,461,1690,9,33,3.7,105.6,26
+19,Indianapolis Colts,16,419,1660,15,72,4.0,103.8,25
+20,Carolina Panthers,16,356,1525,12,67,4.3,95.3,24
+21,Green Bay Packers,16,386,1519,13,36,3.9,94.9,28
+22,Miami Dolphins,16,445,1453,8,34,3.3,90.8,23
+23,New England Patriots,16,425,1426,9,43,3.4,89.1,27
+24,Seattle Seahawks,16,408,1408,5,45,3.5,88.0,31
+25,New York Giants,16,431,1408,11,40,3.3,88.0,29
+26,Chicago Bears,16,396,1387,4,49,3.5,86.7,32
+27,San Diego Chargers,16,410,1246,10,54,3.0,77.9,29
+28,Detroit Lions,16,356,1245,8,51,3.5,77.8,21
+29,Arizona Cardinals,16,396,1207,13,58,3.0,75.4,31
+30,Atlanta Falcons,16,373,1196,9,33,3.2,74.8,24
+31,Cleveland Browns,16,313,1150,9,40,3.7,71.9,29
+,Avg Team,,437.0,1703.8,11.7,53,3.9,106.5,25.8
+,League Total,,13548,52819,363,82,3.9,106.5,801
+,Avg Tm/G,,27.3,106.5,0.7,,3.9,106.5,1.6
