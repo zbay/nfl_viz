@@ -27,9 +27,10 @@ def rankFusionStats(first_year, last_year):
             (year_csv["Y/Arun_Defense_Low_Rank"]) + (year_csv["NY/A_Defense_Low_Rank"])) / 6.0
         year_csv["STscore"] = (((year_csv["Y/PR_High_Rank"]) + (year_csv["Y/KR_High_Rank"]) 
             + (year_csv["Y/Pnt_High_Rank"]) + (year_csv["FG%_High_Rank"]) + 
-            ((year_csv['TFGM_High_Rank'] + year_csv['PrYds_High_Rank'] + year_csv['KrYds_High_Rank']) / 3.0) +
+            ((year_csv['TFGM_High_Rank'] + year_csv['PrYds_High_Rank'] + year_csv['KrYds_High_Rank'] 
+              + year_csv['KrYds_Defense_Low_Rank'] + year_csv['PrYds_Defense_Low_Rank']) / 5.0) +
             (year_csv["Y/PR_Defense_Low_Rank"]) + (year_csv["Y/KR_Defense_Low_Rank"]) + 
-            (year_csv["Y/Pnt_Defense_Low_Rank"]) + (0.25 * (year_csv["FG%_Defense_Low_Rank"])))) / 8.25
+            (year_csv["Y/Pnt_Defense_Low_Rank"]) + (0.1 * (year_csv["FG%_Defense_Low_Rank"])))) / 8.1
         year_csv["ThreePhaseScore"] = (((year_csv["Oscore"]) + (year_csv["Dscore"]) + (0.75* (year_csv["STscore"])))) / 2.75
         year_csv["FantasyPassScore"] = ((year_csv["Cmp_High_Rank"]) + (year_csv["PassYds_High_Rank"] * 2.0) +
             (year_csv["PassTD_High_Rank"] * 2.0) + (year_csv["Int%_Low_Rank"])
