@@ -10,4 +10,4 @@ The spreadsheet contains sortable tables, a few bubble charts, and a year-by-yea
 ![Head coach average rankings](https://raw.githubusercontent.com/zbay/nfl_viz/master/overall_coach.png "Head coach average rankings")
 
 And here's a small part of the heatmap, which demonstrates trends in the average teams' football statistics over time.
-![Year by year heatmap](https://raw.githubusercontent.com/zbay/nfl_viz/master/overall_coach.png "Head coach average rankings")
+![Year by year heatmap](https://raw.githubusercontent.com/zbay/nfl_viz/master/heatmap.png "Year by year heatmap")
