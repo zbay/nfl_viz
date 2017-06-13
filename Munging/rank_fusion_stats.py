@@ -1,16 +1,18 @@
 import pandas as pd
 
-#for each year of offense and defense, compute advanced stats
-
-#earliest years we are using data from
-min_year = 1981
-
-#latest year
-max_year = 2016
-
 teams = ["WAS", "NYG", "PHI", "DAL", "ATL", "CAR", "NO", "TB", "GB", "DET", "MIN", "CHI", "SF", "ARI", "LAR", "SEA",
          "BAL", "CLE", "CIN", "PIT", "IND", "JAX", "HOU", "TEN", "NE", "MIA", "NYJ", "BUF", "LAC", "DEN", "KC", "OAK"]
 
+#for each team, for each year, compute adv stats and add them to the dataframe and save back to csv
+#Oscore = (PFRank + YdsRank + 1stDRank + TORank + Y/ArunRank + NY/ARank) / 6
+#Dscore = (PF_DefenseRank + Yds_DefenseRank + 1stD_DefenseRank + TO_DefenseRank + Y/Arun_DefenseRank + NY/A_DefenseRank) / 6
+#STscore = (Y/PRRank + Y/KRRank + Y/PntRank + FG%Rank + Y/PR_DefenseRank + Y/KR_DefenseRank + Y/Pnt_DefenseRank + FG%_DefenseRank) / 8
+#ThreePhaseScore - (Oscore + Dscore + STscore) / 3
+#FantasyPassScore = (PassCmpRank + PassYdsRank + PassTDRank + PassIntRank + Pass1DRank + Y/ApassRank) / 6
+#FantasyRushScore = (RushAttRank + RushYdsRank + RushTDRank + Rush1DRank + FLRank) / 5
+#FantasyOffenseScore = (FantasyPassScore + FantasyRushScore) / 2
+#FantasyDstScore = (((PrYdsRank + KrYdsRank) / 2) + PF_DefenseRank + Yds_DefenseRank + Sk_DefenseRank + TO_DefenseRank + DefensivePtsScored_Rank) / 6
+#GameControlScore = (TimeOfPossession_High_Rank + AvgFieldPositionDifferential_High_Rank + YdsDifferential_High_Rank + PF_Differential_High_Rank + TO_Differential_Low_Rank) / 5.0
 def rankFusionStats(first_year, last_year):
     for year in range(first_year, last_year+1):
         fileLocation = "../ProcessedData/Yearly_Ranked/ranked_" + str(year) + ".csv"
@@ -84,4 +86,4 @@ def rankFusionStats(first_year, last_year):
         year_csv = year_csv.append(avg_csv)
         year_csv.to_csv(fileLocation, index=False)
         
-rankFusionStats(min_year, max_year)
+rankFusionStats(1981, 2016)

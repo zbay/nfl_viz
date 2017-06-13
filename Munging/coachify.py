@@ -10,7 +10,7 @@ latestYear = 2016
 
 offensiveColumns = ["Year", "Tm", "PF", "TotalYds", "Ply", "Y/Play",
     "TO", "#Dr", "Plays/Drive", "Yds/Drive", "AvgStartingPosition",
-    "AvgDriveTime", "Pts/Drive", "TimeOfPossession",
+    "AvgDriveTime", "Pts/Drive",
     "Fmb", "FL", "FumbleLostPercent",
     "1stD", "Cmp", "PassAtt", "PassYds", "PassTD",
     "Int", "NY/A", "1stDpass", "RushAtt", "RushYds", "RushTD", "Y/Arun",
@@ -19,31 +19,29 @@ offensiveColumns = ["Year", "Tm", "PF", "TotalYds", "Ply", "Y/Play",
     "SkYds", "ANY/A", "Sk%", "ExpectedPointsPassing", "ExpectedPointsRunning",
     "TFGA", "TFGM",
     "FGA50Plus", "FGM50Plus", "FG%", "XP%", "2PA", "2PM", "Sfty",
-    "TO_Differential", "PF_Differential", "Yds_Differential",
     "PassPercent", "RunPercent", "PassYdPercent", "RunYdPercent",
-    "PassTdPercent", "RunTdPercent", "PassTdPercent" "RunYdPercent",
+    "PassTdPercent", "RunTdPercent",
     "PassRun1dRatio", "RunPass1dRatio", "Penalty1dPercent", 
     "YppYprRatio", 
     "PF_High_Rank", "TotalYds_High_Rank", "Ply_High_Rank", "Y/Play_High_Rank",
-    "TO_Low_Rank", "#Dr", "Plays/Drive", "Yds/Drive", "AvgStartingPosition",
-    "AvgDriveTime", "Pts/Drive", "TimeOfPossession",
-    "Fmb", "FL", "FumbleLostPercent",
+    "Plays/Drive_High_Rank", "Yds/Drive_High_Rank", "AvgDriveTime_High_Rank", "Pts/Drive_High_Rank",
+    "Fmb_Low_Rank", "FL_Low_Rank",
+    "TO_Low_Rank", "Plays/Drive_High_Rank", "Yds/Drive_High_Rank", "AvgDriveTime_High_Rank", "Pts/Drive_High_Rank", 
     "1stD_High_Rank", "Cmp_High_Rank", "PassAtt_High_Rank", "PassYds_High_Rank", "PassTD_High_Rank",
     "Int_Low_Rank", "NY/A_High_Rank", "1stDpass_High_Rank", "RushAtt_High_Rank", "RushYds_High_Rank", "RushTD_High_Rank", "Y/Arun_High_Rank",
     "1stDrun_High_Rank", "Pen_Low_Rank", "PenYds_Low_Rank", "1stPy_High_Rank", "Sc%_High_Rank", "TO%_Low_Rank", "ExpectedPoints_High_Rank",
     "Cmp%_High_Rank", "PassTD%_High_Rank", "Int%_Low_Rank", "Y/Apass_High_Rank", "AY/A_High_Rank", "Y/C_High_Rank", "QbRating_High_Rank", "Sk_Low_Rank",
-    "SkYds_Low_Rank", "ANY/A_High_Rank", "Sk%_Low_Rank", "ExpectedPointsPassing_High_Rank", "ExpectedPointsRushing_High_Rank",
+    "SkYds_Low_Rank", "ANY/A_High_Rank", "Sk%_Low_Rank", "ExpectedPointsPassing_High_Rank", "ExpectedPointsRunning_High_Rank",
     "TFGA_High_Rank", "TFGM_High_Rank", "FG%_High_Rank", "XP%_High_Rank",
-    "TO_Differential_High_Rank", "PF_Differential_High_Rank", "Yds_Differential_High_Rank",
     "PassPercent_High_Rank", "RunPercent_High_Rank", "PassYdPercent_High_Rank", "RunYdPercent_High_Rank",
-    "PassTdPercent_High_Rank", "RunTdPercent_High_Rank", "PassTdPercent_High_Rank", "RunYdPercent_High_Rank",
+    "PassTdPercent_High_Rank", "RunTdPercent_High_Rank", "PassTdPercent_High_Rank",
     "PassRun1dRatio_High_Rank", "RunPass1dRatio_High_Rank", "Penalty1dPercent_High_Rank", 
     "YppYprRatio_High_Rank", "Oscore", "FantasyPassScore", "FantasyRushScore",
-    "FantasyOffenseScore", "GameControlScore", "GameControlPlusBalance", "Oscore_Rank", "FantasyPassScore_Rank",
-    "FantasyRushScore_Rank", "FantasyOffenseScore_Rank", "GameControlScore_Rank", "GameControlPlusBalance_Rank"]
+    "FantasyOffenseScore", "Oscore_Rank", "FantasyPassScore_Rank",
+    "FantasyRushScore_Rank", "FantasyOffenseScore_Rank"]
     
 defensiveColumns = ["Year", "Tm", "PF_Defense", "TotalYds_Defense", "Ply_Defense", "Y/Play_Defense",
-    "TO_Defense", "#Dr_Defense", "Plays/Drive_Defense", "Yds/Drive_Defense", "AvgStartingPosition_Defense",
+    "TO_Defense", "#Dr_Defense", "Plays/Drive_Defense", "Yds/Drive_Defense",
     "AvgDriveTime_Defense", "Pts/Drive_Defense", "TimeOfPossession_Defense",
     "FL_Defense",
     "1stD_Defense", "Cmp_Defense", "PassAtt_Defense", "PassYds_Defense", "PassTD_Defense",
@@ -52,29 +50,28 @@ defensiveColumns = ["Year", "Tm", "PF_Defense", "TotalYds_Defense", "Ply_Defense
     "Cmp%_Defense", "PassTD%_Defense", "Int%_Defense", "Y/Apass_Defense", "AY/A_Defense", "Y/C_Defense", "QbRating_Defense", "Sk_Defense",
     "SkYds_Defense", "ANY/A_Defense", "Sk%_Defense", "ExpectedPointsPassing_Defense", "ExpectedPointsRunning_Defense",
     "TFGA_Defense", "TFGM_Defense",
-    "FG%_Defense", "XP%_Defense", "2PA_Defense", "2PM_Defense", "Sfty_Defense",
-    "TO_Differential", "PF_Differential", "Yds_Differential",
+    "FG%_Defense", "XP%_Defense", "2PM_Defense", "Sfty_Defense",
     "PassPercent_Defense", "RunPercent_Defense", "PassYdPercent_Defense", "RunYdPercent_Defense",
     "PassTdPercent_Defense", "RunTdPercent_Defense", "PassTdPercent_Defense", "RunYdPercent_Defense",
     "Penalty1dPercent_Defense", 
     "YppYprRatio_Defense", 
     "PF_Defense_Low_Rank", "TotalYds_Defense_Low_Rank", "Ply_Defense_Low_Rank", "Y/Play_Defense_Low_Rank",
-    "TO_Defense_High_Rank", "#Dr_Defense", "Plays/Drive_Defense", "Yds/Drive_Defense", "AvgStartingPosition_Defense",
-    "AvgDriveTime_Defense", "Pts/Drive_Defense", "TimeOfPossession_Defense",
-    "FL_Defense",
+    "Plays/Drive_Defense_Low_Rank", "Yds/Drive_Defense_Low_Rank", "Pts/Drive_Defense_Low_Rank", "AvgDriveTime_Defense_Low_Rank",
+    "TO_Defense_High_Rank", "FL_Defense_High_Rank",
     "1stD_Defense_Low_Rank", "Cmp_Defense_Low_Rank", "PassAtt_Defense_Low_Rank", "PassYds_Defense_Low_Rank",
     "PassTD_Defense_Low_Rank",
     "Int_Defense_High_Rank", "NY/A_Defense_Low_Rank", "1stDpass_Defense_Low_Rank", "RushAtt_Defense_Low_Rank", "RushYds_Defense_Low_Rank", "RushTD_Defense_Low_Rank", "Y/Arun_Defense_Low_Rank",
-    "1stDrun_Defense_Low_Rank", "Pen_Defense_Low_Rank", "PenYds_Defense_Low_Rank", "1stPy_Defense_Low_Rank", "Sc%_Defense_Low_Rank", "TO%_Defense_High_Rank", "ExpectedPoints_Defense_High_Rank",
-    "Cmp%_High_Rank", "PassTD%_High_Rank", "Int%_Low_Rank", "Y/Apass_High_Rank", "AY/A_High_Rank", "Y/C_High_Rank", "QbRating_High_Rank", "Sk_Defense_High_Rank",
+    "1stDrun_Defense_Low_Rank", "FL_Defense_High_Rank",
+    "Pen_Defense_Low_Rank", "PenYds_Defense_Low_Rank", "1stPy_Defense_Low_Rank", "Sc%_Defense_Low_Rank", "TO%_Defense_High_Rank", "ExpectedPoints_Defense_High_Rank",
+    "Cmp%_Defense_Low_Rank", "PassTD%_Defense_Low_Rank", "Int%_Defense_High_Rank", "Y/Apass_Defense_Low_Rank",
+    "AY/A_Defense_Low_Rank", "Y/C_Defense_Low_Rank", "QbRating_Defense_Low_Rank", "Sk_Defense_High_Rank",
     "SkYds_Defense_High_Rank", "ANY/A_Defense_Low_Rank", "Sk%_Defense_High_Rank", "ExpectedPointsPassing_Defense_High_Rank", "ExpectedPointsRunning_Defense_High_Rank",
     "TFGA_Defense_Low_Rank", "TFGM_Defense_Low_Rank", "FG%_Defense_Low_Rank", "XP%_Defense_Low_Rank",
-    "TO_Differential_High_Rank", "PF_Differential_High_Rank", "Yds_Differential_High_Rank",
     "PassPercent_Defense_High_Rank", "RunPercent_Defense_High_Rank", "PassYdPercent_Defense_High_Rank", "RunYdPercent_Defense_High_Rank",
-    "PassTdPercent_Defense_High_Rank", "RunTdPercent_Defense_High_Rank", "PassTdPercent_Defense_High_Rank", "RunYdPercent_Defense_High_Rank",
+    "PassTdPercent_Defense_High_Rank", "RunTdPercent_Defense_High_Rank", "PassTdPercent_Defense_High_Rank",
     "Penalty1dPercent_Defense_High_Rank", 
-    "YppYprRatio_Defense_High_Rank", "Dscore","FantasyDstScore", "GameControlScore", "GameControlPlusBalance", "Dscore_Rank",
-    "FantasyDstScore_Rank", "GameControlScore_Rank", "GameControlPlusBalance_Rank"]
+    "YppYprRatio_Defense_High_Rank", "Dscore","FantasyDstScore", "Dscore_Rank",
+    "FantasyDstScore_Rank", "DefensivePtsScored_High_Rank"]
 
 # for each coach with a given job, get all their team's data from that year
 def coachifyData(job):
@@ -123,31 +120,34 @@ def coachifyReports(job):
             do = "nothing"
                 
 def offensiveReports(coach, tenures):
-    outputLoc = "../ProcessedData/Coaches_Offense/" + coach + ".csv"
-    meanRow = tenures.mean()
-    medianRow = tenures.median()
-    meanRow['Year'] = "Mean year"
-    medianRow['Year'] = "Median year"
-    tenures = tenures.append(meanRow, ignore_index=True).append(medianRow, ignore_index=True)
-    tenures.to_csv(outputLoc, columns=offensiveColumns, index=False)
+    if tenures.shape[0] > 0:
+        outputLoc = "../ProcessedData/Coaches_Offense/" + coach + ".csv"
+        meanRow = tenures.mean()
+        medianRow = tenures.median()
+        meanRow['Year'] = "Mean year"
+        medianRow['Year'] = "Median year"
+        tenures = tenures.append(meanRow, ignore_index=True).append(medianRow, ignore_index=True)
+        tenures.to_csv(outputLoc, columns=offensiveColumns, index=False)
         
 def defensiveReports(coach, tenures):
-    outputLoc = "../ProcessedData/Coaches_Defense/" + coach + ".csv"
-    meanRow = tenures.mean()
-    medianRow = tenures.median()
-    meanRow['Year'] = "Mean year"
-    medianRow['Year'] = "Median year"
-    tenures = tenures.append(meanRow, ignore_index=True).append(medianRow, ignore_index=True)
-    tenures.to_csv(outputLoc, columns=defensiveColumns, index=False)
+    if tenures.shape[0] > 0:
+        outputLoc = "../ProcessedData/Coaches_Defense/" + coach + ".csv"
+        meanRow = tenures.mean()
+        medianRow = tenures.median()
+        meanRow['Year'] = "Mean year"
+        medianRow['Year'] = "Median year"
+        tenures = tenures.append(meanRow, ignore_index=True).append(medianRow, ignore_index=True)
+        tenures.to_csv(outputLoc, columns=defensiveColumns, index=False)
 
 def hcReports(coach, tenures):
-    outputLoc = "../ProcessedData/Coaches_Head/" + coach + ".csv"
-    meanRow = tenures.mean()
-    medianRow = tenures.median()
-    meanRow['Year'] = "Mean year"
-    medianRow['Year'] = "Median year"
-    tenures = tenures.append(meanRow, ignore_index=True).append(medianRow, ignore_index=True)
-    tenures.to_csv(outputLoc, index=False)
+    if tenures.shape[0] > 0:
+        outputLoc = "../ProcessedData/Coaches_Head/" + coach + ".csv"
+        meanRow = tenures.mean()
+        medianRow = tenures.median()
+        meanRow['Year'] = "Mean year"
+        medianRow['Year'] = "Median year"
+        tenures = tenures.append(meanRow, ignore_index=True).append(medianRow, ignore_index=True)
+        tenures.to_csv(outputLoc, index=False)
     
 
 def coachifyAll():
@@ -163,4 +163,4 @@ def coachifyAll():
     
     
 
-coachifyAll()
+#coachifyAll()

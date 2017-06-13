@@ -1,10 +1,5 @@
 import pandas as pd
 
-# earliest year for which a relevant coach has data
-min_year = 1981
-# latest completed season
-max_year = 2016
-
 # indicate the columns to rename and delete from the raw tables
 rename_offense = {"Yds": "TotalYds", "Y/P": "Y/Play", 
     "Att": "PassAtt", "Yds.1": "PassYds", "TD": "PassTD",
@@ -77,6 +72,12 @@ delete_drives_offense = ["Rk", "G", "Plays", "Sc%", "TO%"]
 rename_drives_defense = rename_drives_offense
 
 delete_drives_defense = delete_drives_offense
+
+drive_cols = ["#Dr", "Plays/Dr", "Yds/Drive", "AvgStartingPosition",
+              "AvgDriveTime", "Pts/Drive", "#Dr_Defense",
+              "Plays/Drive_Defense", "Yds/Drive_Defense",
+              "AvgStartingPosition_Defense", "AvgDriveTime_Defense",
+              "Pts/Drive_Defense"]
 
 rename_scoring_offense = {"FblTD": "FmbTD"}
 
@@ -247,7 +248,8 @@ def zeroify(first_year, last_year, phase):
         file = "../IntermediateData/" + phase + "/" + phase.lower() + "_" + str(year) + ".csv"
         data_csv = pd.read_csv(file) 
         for column in data_csv:
-            data_csv.loc[pd.isnull(data_csv[column]), column] = 0
+            if column not in drive_cols:
+                data_csv.loc[pd.isnull(data_csv[column]), column] = 0
         data_csv.to_csv(file, index=False)
 
 # apply all the other functions in this file to the raw data. Drive data only exists since 1998, which is why drive data is treated differently
@@ -255,6 +257,8 @@ def preprocess(first_year, last_year):
     phases = ["Offense", "Pass_Offense", "Defense", "Pass_Defense", "Returns", "Returns_Against", "Kicking_Punting",
               "Kicking_Punting_Against", "Drives", "Drives_Against", "Scoring_Offense", "Scoring_Defense",
               "Rush_Offense", "Rush_Defense"]
+    phasesWithMissing = ["Offense", "Defense", "Pass_Offense", "Pass_Defense", "Scoring_Offense"]
+    phasesDefense = ["Defense", "Pass_Defense", "Returns_Against", "Kicking_Punting_Against", "Rush_Defense", "Scoring_Defense"]
     for phase in phases:
         if phase == "Drives" or phase == "Drives_Against":
             deleteRows(1998, last_year, phase)
@@ -272,20 +276,12 @@ def preprocess(first_year, last_year):
     percentToDecimal(first_year, last_year, "Kicking_Punting")
     percentToDecimal(first_year, last_year, "Kicking_Punting_Against")
 
-    computeMissing(first_year, last_year, "Offense")
-    computeMissing(first_year, last_year, "Defense")
-    computeMissing(first_year, last_year, "Pass_Offense")
-    computeMissing(first_year, last_year, "Pass_Defense")
-    computeMissing(first_year, last_year, "Scoring_Offense")
+    for phase in phasesWithMissing:
+        computeMissing(first_year, last_year, phase)
     
-    appendDefense(first_year, last_year, "Defense")
-    appendDefense(first_year, last_year, "Pass_Defense")
-    appendDefense(first_year, last_year, "Returns_Against")
-    appendDefense(first_year, last_year, "Kicking_Punting_Against")
-    appendDefense(first_year, last_year, "Rush_Defense")
-    appendDefense(first_year, last_year, "Scoring_Defense")
+    for phase in phasesDefense:
+        appendDefense(first_year, last_year, phase)
+
     appendDefense(1998, last_year, "Drives_Against")
-
-
     
-preprocess(min_year, max_year)
+#preprocess(min_year, max_year)

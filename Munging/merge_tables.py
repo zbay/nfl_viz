@@ -6,9 +6,10 @@ min_year = 1981
 #latest year
 max_year = 2016
 
-renamer = {"Pts": "Pts/Drive", "Pts_Defense": "Pts/Drive_Defense"}
-
 def merge_all(first_year, last_year):
+    
+    renamer = {"Pts": "Pts/Drive", "Pts_Defense": "Pts/Drive_Defense"}
+    
     startFile = "../IntermediateData/Offense/offense_"
     fileLocations = ["../IntermediateData/Pass_Offense/pass_offense_", "../IntermediateData/Returns/returns_",
                      "../IntermediateData/Kicking_Punting/kicking_punting_", "../IntermediateData/Defense/defense_", "../IntermediateData/Pass_Defense/pass_defense_",
@@ -27,4 +28,4 @@ def merge_all(first_year, last_year):
         start_csv = start_csv.rename(columns=renamer)
         start_csv = start_csv.to_csv("../IntermediateData/Merged/merged_" + str(year) + ".csv", index=False)
         
-merge_all(min_year, max_year)
+#merge_all(min_year, max_year)

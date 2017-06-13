@@ -27,7 +27,7 @@ highGoodExp = ["ExpectedPoints", "ExpectedPointsPassing",
 highGoodDrive = ["#Dr", "Plays/Drive",
                    "Yds/Drive", "AvgStartingPosition",
                    "AvgDriveTime", "Pts/Drive",
-                   "TimeOfPossession", "AvgFieldPositionDifferential"]
+                   "TimeOfPossession", "AvgFieldPositionDifferential", "Sc%"]
 
 #Neither high or low values are necessarily good for these. We'll treat them like "highGood" though
 neutralGood = ["PassPercent", "RunPercent", 
@@ -42,7 +42,7 @@ neutralGood = ["PassPercent", "RunPercent",
                   "Penalty1dPercent_Defense", "YppYprRatio_Defense",
                   'PassRun1dRatio', 'RunPass1dRatio'] 
                    
-lowGood = ["TO", "FL", "Int", "Pen", "PenYds", "TO%",
+lowGood = ["TO", "Fmb", "FL", "Int", "Pen", "PenYds", "TO%",
                   "Sk", "SkYds", "Sk%", "Int%",
                   "PF_Defense", "TotalYds_Defense",
                   "Ply_Defense", "Y/Play_Defense",
@@ -75,14 +75,9 @@ lowGood = ["TO", "FL", "Int", "Pen", "PenYds", "TO%",
 lowGoodDrive = ["#Dr_Defense",
                   "Plays/Drive_Defense", 
                   "Yds/Drive_Defense", 
+                  "AvgDriveTime_Defense",
                   "AvgStartingPosition_Defense",
-                  "Pts/Drive_Defense"]
-
-min_year = 1981
-
-#latest year
-max_year = 2016
-
+                  "Pts/Drive_Defense", "Sc%_Defense"]
 
 def rankAllYears(first_year, last_year):
     for year in range(first_year, last_year+1):
@@ -116,4 +111,4 @@ def rankAllYears(first_year, last_year):
         realTeams = realTeams.append(avgTeam)
         realTeams.to_csv(outputLocation, index=False)
 
-rankAllYears(min_year, max_year)
+#rankAllYears(min_year, max_year)

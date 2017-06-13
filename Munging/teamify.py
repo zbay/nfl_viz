@@ -14,17 +14,7 @@ teamDict = {"WAS": ["Washington Redskins"], "NYG": ["New York Giants"], "PHI": [
 "DEN": ["Denver Broncos"], "OAK": ["Oakland Raiders", "Los Angeles Raiders"], 
 "LAC": ["San Diego Chargers", "Los Angeles Chargers"], "AVG": ["Avg Team"]}
 
-# "AVG": ["Avg Team"]
-
-#earliest years we are using data from
-min_year = 1981
-
-#latest year
-max_year = 2016
-
-
-
-def teamify():
+def teamify(min_year, max_year):
     for team in teamDict:
         outputFile = "../ProcessedData/Teamified/" + team + ".csv"
         startFile = "../ProcessedData/Yearly_Ranked/ranked_1981.csv"
@@ -49,4 +39,4 @@ def teamify():
         team_csv = team_csv[cols]
         team_csv.to_csv(outputFile, index=False)
              
-teamify()
+#teamify()
